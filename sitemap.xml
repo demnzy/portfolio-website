@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nu-age-cdn.b-cdn.net/avatars/3ae211ec-919e-47f0-b350-dcd22aebb9bd/avatar_88ec113f82b0.jpg</image:loc>
+      <image:title>Oluwatobiloba Daniel Davies - Backend &amp; Data Engineer, ML Researcher</image:title>
+      <image:caption>Portrait of Oluwatobiloba Daniel Davies, 300L Mechatronics Engineering scholar and PyTorch Nigeria Community Manager.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#about</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#projects</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#buildhub</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#experience</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#credentials</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://demnzy.github.io/portfolio-website/#contact</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+

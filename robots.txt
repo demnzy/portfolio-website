@@ -1,0 +1,7 @@
+# Robots.txt for Oluwatobiloba Davies Portfolio
+User-agent: *
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://demnzy.github.io/portfolio-website/sitemap.xml
+
