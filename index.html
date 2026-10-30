@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oluwatobiloba Daniel Davies — Mechatronics Engineer & ML Researcher</title>
-  <meta name="description" content="Personal portfolio of Oluwatobiloba Daniel Davies — Mechatronics Engineering student at FUTMinna (4.96 CGPA), PyTorch Nigeria Community Manager, and builder of intelligent software and hardware systems."/>
+  <title>Oluwatobiloba Davies | Backend & Data Engineer, ML Researcher</title>
+  <meta name="description" content="Portfolio of Oluwatobiloba Daniel Davies: Backend & Data Engineer, ML Researcher, 300L Mechatronics Scholar at FUTMinna (4.96 CGPA), and Community Manager at PyTorch Nigeria. Specializing in FastAPI, n8n automation, PyTorch, and full-stack development."/>
 
-  <!-- Fonts: Space Grotesk + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Fonts: Syne (Display) + Instrument Serif (Editorial Accent) + DM Sans (Body) + Space Mono (Code/Telemetry) -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
     /* ── BASE & PALETTE (DEEP BLUE & METALLIC GOLD) ── */
@@ -50,16 +50,25 @@
       --radius-lg: 22px;
       --radius-full: 9999px;
 
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Syne', -apple-system, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
 
       --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .font-serif {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0.01em;
     }
 
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      cursor: url('./wrench_cursor.svg') 3 3, auto;
     }
 
     body {
@@ -70,6 +79,16 @@
       line-height: 1.7;
       overflow-x: hidden;
       position: relative;
+      cursor: url('./wrench_cursor.svg') 3 3, auto;
+    }
+
+    /* Engineering Interactive Wrench Cursor on Clickables */
+    a, button, [role='button'], 
+    .btn-gold, .btn-navy, .btn-nav-terminal, .btn-copy, .btn-cert-verify, 
+    .filter-tab, .view-btn, .link-live, .verify-link, .window-open-btn,
+    .brand-link, .mobile-menu-btn, .back-to-top, .terminal-close-btn,
+    input, select, textarea {
+      cursor: url('./wrench_pointer.svg') 3 3, pointer;
     }
 
     ::selection {
@@ -251,36 +270,22 @@
       position: relative;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 64px;
+    .hero-header-lockup {
+      display: flex;
       align-items: center;
-    }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 6px 16px;
-      border-radius: var(--radius-full);
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid var(--gold-border);
-      color: var(--gold-light);
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 500;
-      margin-bottom: 24px;
+      gap: 36px;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
     }
 
     .hero-title {
       font-family: var(--font-display);
       font-size: clamp(2.4rem, 4.4vw, 3.8rem);
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.25;
       color: #ffffff;
-      letter-spacing: -0.025em;
-      margin-bottom: 22px;
+      letter-spacing: -0.02em;
+      margin-bottom: 0;
     }
 
     .gold-shimmer {
@@ -291,16 +296,76 @@
     }
 
     .hero-bio {
-      font-size: 1.12rem;
-      line-height: 1.8;
+      font-size: 1.15rem;
+      line-height: 1.85;
       color: var(--text-muted);
       margin-bottom: 32px;
-      max-width: 620px;
+      max-width: 860px;
     }
 
     .hero-bio strong {
       color: #ffffff;
       font-weight: 600;
+    }
+
+    .cgpa-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 3px 12px;
+      margin: 0 4px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 999px;
+      color: #fceea7;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.22);
+      vertical-align: middle;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+    }
+
+    .cgpa-pill:hover {
+      background: rgba(212, 175, 55, 0.22);
+      border-color: var(--gold);
+      box-shadow: 0 0 24px rgba(212, 175, 55, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .cgpa-pill .cgpa-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+      animation: pulseGoldDot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseGoldDot {
+      0%, 100% { opacity: 0.6; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    .hero-skill-link {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: rgba(212, 175, 55, 0.55);
+      text-underline-offset: 4px;
+      transition: all 0.2s ease;
+      display: inline-block;
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+
+    .hero-skill-link:hover {
+      color: var(--gold-light);
+      text-decoration-color: var(--gold);
+      background: rgba(212, 175, 55, 0.14);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
     }
 
     .hero-actions {
@@ -352,25 +417,20 @@
       transform: translateY(-2px);
     }
 
-    /* ── HERO RIGHT: CIRCULAR ORBITAL PORTRAIT ── */
-    .portrait-col {
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-
+    /* ── ORBITAL PORTRAIT (SITS NEXT TO HEADER TAG LINE) ── */
     .orbital-portrait-stage {
       position: relative;
-      width: 360px;
-      height: 360px;
+      width: 170px;
+      height: 170px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .orbit-ring {
       position: absolute;
-      inset: -14px;
+      inset: -10px;
       border-radius: 50%;
       border: 1.5px dashed var(--gold-border);
       animation: spin-orbit 42s linear infinite;
@@ -379,7 +439,7 @@
 
     .orbit-ring-inner {
       position: absolute;
-      inset: -4px;
+      inset: -3px;
       border-radius: 50%;
       border: 1px solid rgba(212, 175, 55, 0.16);
       animation: spin-orbit-rev 30s linear infinite;
@@ -388,13 +448,13 @@
 
     .orbit-satellite {
       position: absolute;
-      top: 12px;
-      right: 42px;
-      width: 8px;
-      height: 8px;
+      top: 6px;
+      right: 20px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--gold-light);
-      box-shadow: 0 0 10px var(--gold);
+      box-shadow: 0 0 8px var(--gold);
     }
 
     @keyframes spin-orbit {
@@ -408,12 +468,12 @@
     }
 
     .portrait-portal {
-      width: 320px;
-      height: 320px;
+      width: 146px;
+      height: 146px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--gold-border);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(212, 175, 55, 0.2);
+      border: 2.5px solid var(--gold-border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.2);
       background: var(--bg-card);
       position: relative;
       z-index: 2;
@@ -695,6 +755,26 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .window-open-btn {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: var(--transition-smooth);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+    }
+
+    .window-open-btn:hover {
+      color: #ffffff;
+      border-color: var(--gold-border);
+      background: rgba(212, 175, 55, 0.12);
     }
 
     /* Interactive Viewport Controls */
@@ -1412,13 +1492,16 @@
       .hero-section {
         padding: 48px 0;
       }
+      .hero-header-lockup {
+        gap: 20px;
+      }
       .orbital-portrait-stage {
-        width: 290px;
-        height: 290px;
+        width: 130px;
+        height: 130px;
       }
       .portrait-portal {
-        width: 260px;
-        height: 260px;
+        width: 110px;
+        height: 110px;
       }
       .exp-card {
         grid-template-columns: 1fr;
@@ -1477,66 +1560,44 @@
       <!-- ═══ HERO SECTION ═══ -->
       <section id="about" class="hero-section">
         <div class="container">
-          <div class="hero-grid">
 
-            <!-- Left Editorial Narrative -->
-            <div>
-              <div class="hero-eyebrow">
-                <span class="pulse-dot"></span>
-                <span>Available for opportunities</span>
+          <!-- Header Tagline Lockup: Title + Profile Image Side-by-Side -->
+          <div class="hero-header-lockup">
+            <h1 class="hero-title">
+              Hi, I'm Oluwatobiloba.<br>
+              <span class="gold-shimmer">Get to know me.</span>
+            </h1>
+
+            <div class="orbital-portrait-stage">
+              <!-- Rotating Engineering Orbital Rings -->
+              <div class="orbit-ring"></div>
+              <div class="orbit-ring-inner">
+                <span class="orbit-satellite"></span>
               </div>
 
-              <h1 class="hero-title">
-                Hi, I'm Oluwatobiloba.<br>
-                <span class="gold-shimmer">Systems Architect</span> &<br>
-                ML Researcher.
-              </h1>
-
-              <p class="hero-bio">
-                I am a <strong>300 Level Mechatronics Engineering scholar at FUTMinna</strong> with a <strong>4.96 / 5.00 CGPA</strong>, and the <strong>Community Manager at PyTorch Nigeria</strong>. I build reliable software and hardware systems that solve real problems — from automated data pipelines that eliminate days of manual work, to learning platforms that help hundreds of students study every day.
-              </p>
-
-              <div class="hero-actions">
-                <a href="#projects" class="btn-gold">Explore My Works ↓</a>
-                <a href="https://github.com/demnzy" target="_blank" rel="noopener noreferrer" class="btn-navy">GitHub ↗</a>
-                <a href="https://linkedin.com/in/oluwatobiloba-davies" target="_blank" rel="noopener noreferrer" class="btn-navy">LinkedIn ↗</a>
-                <button class="btn-navy" onclick="copyEmail()">Copy Email 📋</button>
-              </div>
-            </div>
-
-            <!-- Right Column: Fluid Circular Orbital Portrait (No Square Frame) -->
-            <div class="portrait-col">
-              <div class="orbital-portrait-stage">
-                
-                <!-- Rotating Engineering Orbital Rings -->
-                <div class="orbit-ring"></div>
-                <div class="orbit-ring-inner">
-                  <span class="orbit-satellite"></span>
-                </div>
-
-                <!-- Circular Portrait -->
-                <div class="portrait-portal">
-                  <img 
-                    src="https://nu-age-cdn.b-cdn.net/avatars/3ae211ec-919e-47f0-b350-dcd22aebb9bd/avatar_88ec113f82b0.jpg" 
-                    alt="Oluwatobiloba Daniel Davies Portrait"
-                    onerror="this.onerror=null; this.src='./avatar_preview.jpg';"
-                    loading="eager"
-                  />
-                </div>
-
-                <!-- Floating Verified Status Pill -->
-                <div class="floating-cred-pill">
-                  <span style="color:var(--gold);">★</span>
-                  <div>
-                    <div class="cred-pill-num">4.96 / 5.00 CGPA</div>
-                    <div class="cred-pill-sub">Mechatronics · FUTMinna</div>
-                  </div>
-                </div>
-
+              <!-- Circular Portrait -->
+              <div class="portrait-portal">
+                <img 
+                  src="https://nu-age-cdn.b-cdn.net/avatars/3ae211ec-919e-47f0-b350-dcd22aebb9bd/avatar_88ec113f82b0.jpg" 
+                  alt="Oluwatobiloba Daniel Davies Portrait"
+                  onerror="this.onerror=null; this.src='./avatar_preview.jpg';"
+                  loading="eager"
+                />
               </div>
             </div>
-
           </div>
+
+          <p class="hero-bio">
+            I am a 300-level Mechatronics Engineering scholar at the Federal University of Technology, Minna (<strong>4.96 / 5.00 CGPA</strong>) and Community Manager for <a href="#experience" class="hero-skill-link">PyTorch Nigeria</a>. My work bridges scalable backend architecture, applied intelligence, and physical computing: architecting high-throughput <a href="#projects" class="hero-skill-link">FastAPI backends</a>, orchestrating autonomous <a href="#projects" class="hero-skill-link">n8n workflows</a>, and training deep learning models with <a href="#experience" class="hero-skill-link">PyTorch</a>, rounded out by end-to-end full-stack web and mobile applications and hardware engineering at <a href="#buildhub" class="hero-skill-link">BuildHub</a>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-gold">Explore My Works ↓</a>
+            <a href="https://github.com/demnzy" target="_blank" rel="noopener noreferrer" class="btn-navy">GitHub ↗</a>
+            <a href="https://linkedin.com/in/oluwatobiloba-davies" target="_blank" rel="noopener noreferrer" class="btn-navy">LinkedIn ↗</a>
+            <button class="btn-navy" onclick="copyEmail()">Copy Email 📋</button>
+          </div>
+
         </div>
       </section>
 
@@ -1584,8 +1645,11 @@
                   <a href="https://nu-age.name.ng" target="_blank" rel="noopener noreferrer" class="link-live">
                     ↗ Mirror (nu-age.name.ng)
                   </a>
-                  <a href="https://github.com/demnzy" target="_blank" rel="noopener noreferrer" class="link-live">
-                    ⌥ GitHub Profile
+                  <a href="https://github.com/demnzy/nu-age-frontend" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ Frontend Repo
+                  </a>
+                  <a href="https://github.com/demnzy/nu-age-backend" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ Backend Repo
                   </a>
                 </div>
               </div>
@@ -1601,11 +1665,7 @@
                   <div class="window-url-bar">
                     <span>🔒</span> https://nu-age.com.ng
                   </div>
-                  <div class="viewport-controls">
-                    <button class="view-btn active" data-target="stage-nuage" data-mode="desktop" title="Desktop View">💻 Full</button>
-                    <button class="view-btn" data-target="stage-nuage" data-mode="mobile" title="Mobile Simulator">📱 Mobile</button>
-                    <button class="view-btn" data-target="stage-nuage" data-action="reload" title="Refresh Live Embed">↺</button>
-                  </div>
+                  <a href="https://nu-age.com.ng" target="_blank" rel="noopener noreferrer" class="window-open-btn">Open ↗</a>
                 </div>
                 <div class="iframe-stage" id="stage-nuage">
                   <iframe src="https://nu-age.com.ng" title="Nu Age LMS Live Embed" loading="lazy"></iframe>
@@ -1626,11 +1686,7 @@
                   <div class="window-url-bar">
                     <span>🔒</span> https://kre8.com.ng
                   </div>
-                  <div class="viewport-controls">
-                    <button class="view-btn active" data-target="stage-kre8" data-mode="desktop" title="Desktop View">💻 Full</button>
-                    <button class="view-btn" data-target="stage-kre8" data-mode="mobile" title="Mobile Simulator">📱 Mobile</button>
-                    <button class="view-btn" data-target="stage-kre8" data-action="reload" title="Refresh Live Embed">↺</button>
-                  </div>
+                  <a href="https://kre8.com.ng" target="_blank" rel="noopener noreferrer" class="window-open-btn">Open ↗</a>
                 </div>
                 <div class="iframe-stage" id="stage-kre8">
                   <iframe src="https://kre8.com.ng" title="KRE8 Live Embed" loading="lazy"></iframe>
@@ -1644,7 +1700,7 @@
                   <span class="pill-active-users">● Live in Production</span>
                 </div>
 
-                <h3 class="project-title">KRE8 — Creator Operating System</h3>
+                <h3 class="project-title">KRE8: Creator Operating System</h3>
 
                 <p class="project-summary">
                   I built <strong>KRE8</strong> as an operating system for digital creators and builders to organize their ideas, production roadmaps, and technical research without getting bogged down by clutter. I engineered the frontend using <strong>React and TypeScript</strong> with a focus on speed, responsive state management, and an interface that feels instant on any screen.
@@ -1662,8 +1718,11 @@
                   <a href="https://kre8.com.ng" target="_blank" rel="noopener noreferrer" class="link-live">
                     ↗ Open Platform (kre8.com.ng)
                   </a>
-                  <a href="https://github.com/demnzy" target="_blank" rel="noopener noreferrer" class="link-live">
-                    ⌥ GitHub Profile
+                  <a href="https://github.com/demnzy/kre8-frontend" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ Frontend Repo
+                  </a>
+                  <a href="https://github.com/demnzy/kre8-backend" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ Backend Repo
                   </a>
                 </div>
               </div>
@@ -1709,11 +1768,7 @@
                   <div class="window-url-bar">
                     <span>🔒</span> https://succeedquiz.com
                   </div>
-                  <div class="viewport-controls">
-                    <button class="view-btn active" data-target="stage-sq" data-mode="desktop" title="Desktop View">💻 Full</button>
-                    <button class="view-btn" data-target="stage-sq" data-mode="mobile" title="Mobile Simulator">📱 Mobile</button>
-                    <button class="view-btn" data-target="stage-sq" data-action="reload" title="Refresh Live Embed">↺</button>
-                  </div>
+                  <a href="https://succeedquiz.com" target="_blank" rel="noopener noreferrer" class="window-open-btn">Open ↗</a>
                 </div>
                 <div class="iframe-stage" id="stage-sq">
                   <iframe src="https://succeedquiz.com" title="SucceedQuiz Live Embed" loading="lazy"></iframe>
@@ -1733,42 +1788,49 @@
             <div class="buildhub-grid">
               <div>
                 <h2 class="buildhub-headline">
-                  BuildHub — Bridging Africa's Hardware Engineering Gap
+                  BuildHub: <span class="font-serif" style="color:var(--gold-light); font-size:1.06em;">Bridging</span> Africa's Hardware Gap
                 </h2>
 
                 <p class="buildhub-p">
-                  I founded <strong>BuildHub</strong> at FUTMinna because I saw too many talented engineering students stuck in pure textbook theory. We run hands-on cohorts where students wire physical circuits, program microcontrollers, and learn circuit simulation.
+                  I founded <strong>BuildHub</strong> at FUTMinna to bridge the hardware engineering skills gap in Africa through open-source learning frameworks and community-driven cohorts.
                 </p>
 
                 <p class="buildhub-p">
-                  To scale our impact beyond our campus, we record open video tutorials on YouTube covering Proteus simulation, sensor interfacing, and embedded C. So far, we have graduated two cohorts of student hardware builders who have produced over 12 functional embedded systems.
+                  We operate a dual-structure model: combining open digital learning through our YouTube channel (<a href="https://www.youtube.com/@buildhubbers" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light); text-decoration:underline;">@buildhubbers</a>) with local, physical workforce training cohorts at FUTMinna.
                 </p>
 
-                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; align-items:center;">
                   <span class="pill-active-users">● 2 Graduated Cohorts</span>
-                  <span class="pill-badge">12+ Embedded Hardware Builds</span>
+                  <span class="pill-badge">Physical Hardware Cohorts</span>
+                  <a href="https://www.youtube.com/@buildhubbers" target="_blank" rel="noopener noreferrer" class="link-live" style="margin-left:4px;">
+                    ▶ YouTube (@buildhubbers) ↗
+                  </a>
                 </div>
               </div>
 
               <div class="buildhub-pillars-stack">
                 <div class="pillar-card">
-                  <div class="pillar-head">Open Curriculum on YouTube</div>
+                  <div class="pillar-head">
+                    <a href="https://www.youtube.com/@buildhubbers" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px;">
+                      Global Digital Learning (YouTube) ↗
+                    </a>
+                  </div>
                   <div class="pillar-text">
-                    I produce practical tutorials teaching circuit simulation, sensor wiring, and firmware programming so students anywhere can follow along for free.
+                    Sharing open educational hardware resources and tutorials through our YouTube channel (<a href="https://www.youtube.com/@buildhubbers" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light); text-decoration:underline;">@buildhubbers</a>) to democratize STEM education.
                   </div>
                 </div>
 
                 <div class="pillar-card">
-                  <div class="pillar-head">Hands-On Campus Cohorts</div>
+                  <div class="pillar-head">Physical Workforce Cohorts at FUTMinna</div>
                   <div class="pillar-text">
-                    We host practical workshops at FUTMinna where students breadboard circuits, solder components, and flash code onto microcontrollers together.
+                    Leading intensive practical build cohorts on campus where undergraduates work in teams on physical electronics, circuit testing, and hardware prototyping.
                   </div>
                 </div>
 
                 <div class="pillar-card">
-                  <div class="pillar-head">Peer Engineering Teams</div>
+                  <div class="pillar-head">Peer Engineering Ecosystem</div>
                   <div class="pillar-text">
-                    We connect mechanical, mechatronics, and electrical students into cross-disciplinary teams to tackle real hardware and robotics competitions.
+                    Establishing an open-community framework for peer-to-peer engineering collaboration, technical mentorship, and student competition teams.
                   </div>
                 </div>
               </div>
@@ -1802,7 +1864,7 @@
             <!-- EXP 1: PyTorch Nigeria -->
             <div class="exp-card spotlight-card" data-category="community ai-data">
               <div>
-                <div class="exp-period">OCT 2026 — PRESENT</div>
+                <div class="exp-period">OCT 2026 - PRESENT</div>
                 <h3 class="exp-company">PyTorch Community Nigeria</h3>
                 <div class="exp-geo">Nigeria · Remote</div>
               </div>
@@ -1821,7 +1883,7 @@
             <!-- EXP 2: ReadWrite DS -->
             <div class="exp-card spotlight-card" data-category="ai-data systems">
               <div>
-                <div class="exp-period">OCT 2025 — PRESENT</div>
+                <div class="exp-period">OCT 2025 - PRESENT</div>
                 <h3 class="exp-company">ReadWrite Data Solutions</h3>
                 <div class="exp-geo">Lagos State, Nigeria · Remote</div>
               </div>
@@ -1841,18 +1903,18 @@
             <!-- EXP 3: BuildHub -->
             <div class="exp-card spotlight-card" data-category="community systems">
               <div>
-                <div class="exp-period">JUL 2025 — PRESENT</div>
+                <div class="exp-period">JUL 2025 - PRESENT</div>
                 <h3 class="exp-company">BuildHub</h3>
                 <div class="exp-geo">Minna, Niger State · Hybrid</div>
               </div>
               <div>
                 <h4 class="exp-role">Founder & Lead Organizer</h4>
                 <p class="exp-narrative">
-                  I set the vision and run the day-to-day operations of BuildHub to help African students gain real hardware engineering skills.
+                  I established the strategic vision and operational framework for BuildHub, a hybrid educational organization bridging the hardware engineering skills gap in Africa.
                 </p>
                 <ul class="exp-bullets">
-                  <li>I lead physical workshops at FUTMinna teaching microcontroller programming, circuit simulation, and embedded hardware troubleshooting.</li>
-                  <li>I have personally guided two student cohorts through building working electronics prototypes.</li>
+                  <li>Overseeing our dual-structure model, combining global digital learning on YouTube (<a href="https://www.youtube.com/@buildhubbers" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light); text-decoration:underline;">@buildhubbers</a>) with physical workforce training cohorts at FUTMinna.</li>
+                  <li>Establishing the open-community ecosystem and peer-to-peer engineering support frameworks, successfully guiding two student cohorts.</li>
                 </ul>
               </div>
             </div>
@@ -1860,12 +1922,12 @@
             <!-- EXP 4: Nu Age -->
             <div class="exp-card spotlight-card" data-category="systems ai-data">
               <div>
-                <div class="exp-period">NOV 2025 — PRESENT</div>
+                <div class="exp-period">NOV 2025 - PRESENT</div>
                 <h3 class="exp-company">Nu Age LMS</h3>
                 <div class="exp-geo">Nigeria · Remote</div>
               </div>
               <div>
-                <h4 class="exp-role">Founder & Lead Systems Architect</h4>
+                <h4 class="exp-role">Founder & Full-Stack Engineer</h4>
                 <p class="exp-narrative">
                   I built and launched Nu Age (<a href="https://nu-age.com.ng" target="_blank" style="color:var(--gold-light); text-decoration:underline;">nu-age.com.ng</a>) to give Nigerian undergraduates a faster, unified learning platform.
                 </p>
@@ -1879,12 +1941,12 @@
             <!-- EXP 5: NIHUB FUTMinna -->
             <div class="exp-card spotlight-card" data-category="systems ai-data">
               <div>
-                <div class="exp-period">SEP 2025 — FEB 2026</div>
+                <div class="exp-period">SEP 2025 - FEB 2026</div>
                 <h3 class="exp-company">NIHUB, FUTMinna</h3>
                 <div class="exp-geo">Minna · Huawei ICT Initiative</div>
               </div>
               <div>
-                <h4 class="exp-role">Backend Developer — Disaster Prediction Initiative</h4>
+                <h4 class="exp-role">Backend Developer (Disaster Prediction Initiative)</h4>
                 <p class="exp-narrative">
                   I was a core backend developer on <em>Profesi</em>, a real-time natural disaster prediction platform built under the Huawei ICT research program.
                 </p>
@@ -1898,7 +1960,7 @@
             <!-- EXP 6: Inda Realty (PRESERVED) -->
             <div class="exp-card spotlight-card" data-category="systems">
               <div>
-                <div class="exp-period">NOV 2025 — JAN 2026</div>
+                <div class="exp-period">NOV 2025 - JAN 2026</div>
                 <h3 class="exp-company">Inda Realty</h3>
                 <div class="exp-geo">Lagos State, Nigeria · Remote</div>
               </div>
@@ -1917,7 +1979,7 @@
             <!-- EXP 7: CODeL FUTMinna -->
             <div class="exp-card spotlight-card" data-category="systems community">
               <div>
-                <div class="exp-period">AUG 2025 — DEC 2025</div>
+                <div class="exp-period">AUG 2025 - DEC 2025</div>
                 <h3 class="exp-company">CODeL, FUTMinna</h3>
                 <div class="exp-geo">Minna · Distance Learning Center</div>
               </div>
@@ -1935,17 +1997,17 @@
             <!-- EXP 8: GiftedBrain Academy -->
             <div class="exp-card spotlight-card" data-category="community">
               <div>
-                <div class="exp-period">JAN 2026 — APR 2026</div>
+                <div class="exp-period">JAN 2026 - APR 2026</div>
                 <h3 class="exp-company">GiftedBrain Academy</h3>
                 <div class="exp-geo">Lagos State, Nigeria · Remote</div>
               </div>
               <div>
-                <h4 class="exp-role">JAMB Tutor — Physics & Mathematics</h4>
+                <h4 class="exp-role">JAMB Tutor: Physics & Mathematics</h4>
                 <p class="exp-narrative">
-                  I tutored secondary school graduates preparing for the competitive Nigerian university entrance exams (JAMB UTME).
+                  I provided intensive instruction in Physics and Advanced Mathematics for candidates preparing for the competitive Nigerian university entrance examination (JAMB UTME).
                 </p>
                 <ul class="exp-bullets">
-                  <li>I focused on foundational problem-solving strategies, helping all students in my cohort achieve high competitive scores.</li>
+                  <li>Delivered diagnostic problem-solving strategies and targeted exam coaching, resulting in all <strong>15 students recording a 100% pass rate</strong> in the exam.</li>
                 </ul>
               </div>
             </div>
@@ -1967,50 +2029,50 @@
 
           <div class="skills-quad">
             <div class="skill-card spotlight-card">
-              <h3 class="skill-card-head">Backend & Systems</h3>
+              <h3 class="skill-card-head">Backend Engineering</h3>
               <ul class="skill-items">
                 <li>FastAPI & AsyncIO</li>
-                <li>Python 3</li>
+                <li>Python 3 (Typing, OOP)</li>
                 <li>PostgreSQL & Indexing</li>
                 <li>SQLAlchemy & Alembic</li>
-                <li>RESTful API Design</li>
-                <li>Redis & Caching</li>
+                <li>RESTful API Architecture</li>
+                <li>Docker & AWS EC2</li>
               </ul>
             </div>
 
             <div class="skill-card spotlight-card">
-              <h3 class="skill-card-head">Cloud & DevOps</h3>
-              <ul class="skill-items">
-                <li>AWS EC2 & Linux Admin</li>
-                <li>Docker Containerization</li>
-                <li>Nginx Reverse Proxies</li>
-                <li>SSL/TLS Configuration</li>
-                <li>GitHub Actions CI/CD</li>
-                <li>Bash Shell Scripting</li>
-              </ul>
-            </div>
-
-            <div class="skill-card spotlight-card">
-              <h3 class="skill-card-head">AI & Automation</h3>
+              <h3 class="skill-card-head">Data & Automation</h3>
               <ul class="skill-items">
                 <li>n8n Pipeline Architecture</li>
-                <li>Vision AI (Llama 3.3, olmOCR)</li>
-                <li>PyTorch & Deep Learning</li>
-                <li>Custom JS State Modules</li>
-                <li>Document Parsing & ETL</li>
-                <li>Prompt Engineering & RAG</li>
+                <li>Vision AI (olmOCR, Llama 3)</li>
+                <li>Custom JS Accumulators</li>
+                <li>Batch PDF Parsing & ETL</li>
+                <li>High-Volume Data Ingestion</li>
+                <li>JSON Schema Compliance</li>
               </ul>
             </div>
 
             <div class="skill-card spotlight-card">
-              <h3 class="skill-card-head">Frontend & Hardware</h3>
+              <h3 class="skill-card-head">Machine Learning</h3>
               <ul class="skill-items">
-                <li>React.js & Next.js</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Microcontrollers & Sensors</li>
-                <li>Proteus IoT Simulation</li>
-                <li>Embedded C & Hardware Labs</li>
+                <li>PyTorch Deep Learning</li>
+                <li>RAG & Vector Retrieval</li>
+                <li>Model Inference & Serving</li>
+                <li>Prompt Engineering</li>
+                <li>PyTorch Community Leadership</li>
+                <li>Academic ML Research</li>
+              </ul>
+            </div>
+
+            <div class="skill-card spotlight-card">
+              <h3 class="skill-card-head">Full-Stack & Hardware</h3>
+              <ul class="skill-items">
+                <li>React.js & TypeScript</li>
+                <li>Vite & Modern Frontend</li>
+                <li>Tailwind CSS Design Systems</li>
+                <li>Flet (Python Cross-platform)</li>
+                <li>Embedded Microcontrollers</li>
+                <li>Proteus IoT Circuit Simulation</li>
               </ul>
             </div>
           </div>
@@ -2040,7 +2102,7 @@
               <div class="academic-item">
                 <h3 class="degree-name">B.Eng. Mechatronics, Robotics & Automation</h3>
                 <div class="institution-name">Federal University of Technology, Minna (FUTMinna)</div>
-                <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim); margin: 3px 0 8px;">2024 — Present · Minna, Niger State</div>
+                <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim); margin: 3px 0 8px;">2024 - Present · Minna, Niger State</div>
                 <div>
                   <span class="cgpa-badge">★ CGPA: 4.96 / 5.00 · First Class Standing · 300 Level</span>
                 </div>
@@ -2049,7 +2111,7 @@
               <div class="academic-item" style="border:none; padding-bottom:0; margin-bottom:28px;">
                 <h3 class="degree-name">High School Diploma (Science)</h3>
                 <div class="institution-name">Crystal Gems International School</div>
-                <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim);">2018 — 2024 · Nigeria</div>
+                <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim);">2018 - 2024 · Nigeria</div>
               </div>
 
               <div class="panel-head">
@@ -2209,7 +2271,7 @@
       <!-- ═══ CONTACT BANNER ═══ -->
       <section id="contact" class="container">
         <div class="contact-card spotlight-card">
-          <h2 class="contact-title">Let's build something exceptional together.</h2>
+          <h2 class="contact-title">Let's build something <span class="font-serif" style="color:var(--gold-light); font-size:1.06em;">exceptional</span> together.</h2>
           <p class="contact-body">
             I'm open for machine learning research roles, data engineering contracts, and full-stack systems projects. Whether you have an engineering problem to solve or an ambitious platform to build, reach out.
           </p>
@@ -2411,41 +2473,7 @@
       });
     });
 
-    // ── 3. Interactive Device Viewport Simulator for Live Embeds
-    document.querySelectorAll('.view-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        const mode = btn.getAttribute('data-mode');
-        const action = btn.getAttribute('data-action');
-        const stage = document.getElementById(targetId);
-
-        if (!stage) return;
-
-        if (action === 'reload') {
-          const iframe = stage.querySelector('iframe');
-          if (iframe) {
-            const currentSrc = iframe.src;
-            iframe.src = 'about:blank';
-            setTimeout(() => { iframe.src = currentSrc; }, 80);
-          }
-          btn.style.transform = 'rotate(180deg)';
-          setTimeout(() => { btn.style.transform = ''; }, 400);
-          return;
-        }
-
-        const parentControls = btn.parentElement;
-        parentControls.querySelectorAll('.view-btn[data-mode]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        if (mode === 'mobile') {
-          stage.classList.add('mobile-view');
-        } else {
-          stage.classList.remove('mobile-view');
-        }
-      });
-    });
-
-    // ── 4. Interactive Experience Filter Tabs
+    // ── 3. Interactive Experience Filter Tabs
     const filterTabs = document.querySelectorAll('.filter-tab');
     const expCards = document.querySelectorAll('.exp-card');
 
@@ -2551,9 +2579,9 @@
           if (cmd === 'about' || cmd === 'goto about' || cmd === 'cd about') {
             resRow.innerHTML = scrollToSection('about', 'About & Hero');
           } else if (cmd === 'projects' || cmd === 'goto projects' || cmd === 'cd projects' || cmd === 'works') {
-            resRow.innerHTML = scrollToSection('projects', 'Selected Works');
+            resRow.innerHTML = scrollToSection('projects', 'Selected Works') + '<br><span style="font-size:0.75rem;">Nu Age: <a href="https://github.com/demnzy/nu-age-frontend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">[Frontend]</a> · <a href="https://github.com/demnzy/nu-age-backend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">[Backend]</a> | KRE8: <a href="https://github.com/demnzy/kre8-frontend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">[Frontend]</a> · <a href="https://github.com/demnzy/kre8-backend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">[Backend]</a></span>';
           } else if (cmd === 'buildhub' || cmd === 'goto buildhub' || cmd === 'cd buildhub') {
-            resRow.innerHTML = scrollToSection('buildhub', 'BuildHub Hardware Initiative');
+            resRow.innerHTML = scrollToSection('buildhub', 'BuildHub Hardware Initiative') + '<br><span style="font-size:0.75rem;">YouTube: <a href="https://www.youtube.com/@buildhubbers" target="_blank" style="color:var(--gold-light); text-decoration:underline;">youtube.com/@buildhubbers</a></span>';
           } else if (cmd === 'experience' || cmd === 'goto experience' || cmd === 'cd experience' || cmd === 'career') {
             resRow.innerHTML = scrollToSection('experience', 'Work Experience');
           } else if (cmd === 'credentials' || cmd === 'goto credentials' || cmd === 'cd credentials' || cmd === 'creds' || cmd === 'academics') {
@@ -2567,8 +2595,12 @@
                   <strong>Navigation:</strong><br>
                   &nbsp;&nbsp;<span style="color:var(--gold-light);">about</span> · <span style="color:var(--gold-light);">projects</span> · <span style="color:var(--gold-light);">buildhub</span> · <span style="color:var(--gold-light);">experience</span> · <span style="color:var(--gold-light);">credentials</span> · <span style="color:var(--gold-light);">contact</span><br>
                   <strong>Commands:</strong><br>
-                  &nbsp;&nbsp;<span style="color:var(--gold-light);">cgpa</span> · <span style="color:var(--gold-light);">email</span> · <span style="color:var(--gold-light);">exit</span> · <span style="color:var(--gold-light);">clear</span>
+                  &nbsp;&nbsp;<span style="color:var(--gold-light);">repos</span> · <span style="color:var(--gold-light);">cgpa</span> · <span style="color:var(--gold-light);">email</span> · <span style="color:var(--gold-light);">exit</span> · <span style="color:var(--gold-light);">clear</span>
                 `;
+                break;
+              case 'repos':
+              case 'github':
+                resRow.innerHTML = 'GitHub Repositories:<br>• Nu Age Frontend: <a href="https://github.com/demnzy/nu-age-frontend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">github.com/demnzy/nu-age-frontend</a><br>• Nu Age Backend: <a href="https://github.com/demnzy/nu-age-backend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">github.com/demnzy/nu-age-backend</a><br>• KRE8 Frontend: <a href="https://github.com/demnzy/kre8-frontend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">github.com/demnzy/kre8-frontend</a><br>• KRE8 Backend: <a href="https://github.com/demnzy/kre8-backend" target="_blank" style="color:var(--gold-light); text-decoration:underline;">github.com/demnzy/kre8-backend</a><br>• Profile: <a href="https://github.com/demnzy" target="_blank" style="color:var(--gold-light); text-decoration:underline;">github.com/demnzy</a>';
                 break;
               case 'cgpa':
                 resRow.innerHTML = '<span style="color:var(--gold-bright); font-weight:700;">4.96 / 5.00 CGPA</span> · First Class Standing at FUTMinna (300 Level Mechatronics).';

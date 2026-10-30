@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+  <!-- Shadow filter for high contrast -->
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1" flood-color="#000000" flood-opacity="0.95"/>
+    </filter>
+  </defs>
+
+  <!-- Wrench oriented towards top-left (hotspot at 2, 2) -->
+  <g filter="url(#shadow)" transform="scale(-1, 1) translate(-24, 0)">
+    <!-- Dark Blue Core -->
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" 
+          fill="#060c1e" 
+          stroke="#d4af37" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Metallic Gold Highlight Accent -->
+    <path d="M14.7 6.3l1.6 1.6" stroke="#ffe082" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="2.5" cy="16" r="1" fill="#f3cf65"/>
+  </g>
+
+  <!-- Precision Hotspot Reticle Crosshair at (3, 3) -->
+  <circle cx="3" cy="3" r="1.5" fill="#f3cf65" stroke="#040814" stroke-width="0.75"/>
+</svg>
