@@ -1774,7 +1774,7 @@
           </div>
 
           <p class="hero-bio">
-            I am a 300-level Mechatronics Engineering student at the Federal University of Technology, Minna (<strong>4.96 / 5.00 CGPA</strong>, First Class) and Community Manager of the independent <a href="#experience" class="hero-skill-link">PyTorch Nigeria</a> community. My work spans backend systems, applied ML and scientific computing: I build <a href="#projects" class="hero-skill-link">FastAPI backends</a> and <a href="#projects" class="hero-skill-link">n8n document pipelines</a>, research <a href="#research" class="hero-skill-link">multi-fidelity Gaussian process surrogates</a> for physical simulation with PyTorch and GPyTorch, and teach students to build through <a href="#buildhub" class="hero-skill-link">BuildHub</a>.
+            I'm a Mechatronics Engineering student at FUTMinna (<strong>4.96 / 5.00 CGPA</strong>) who likes building things that actually get used. That means <a href="#projects" class="hero-skill-link">backend systems</a> and data pipelines, apps for students, and <a href="#research" class="hero-skill-link">machine learning models in PyTorch</a>. I'm a Community Manager for <a href="#experience" class="hero-skill-link">PyTorch Nigeria</a>, an independent community for people learning deep learning, and I teach other students to build through <a href="#buildhub" class="hero-skill-link">BuildHub</a>.
           </p>
 
           <div class="hero-actions">
@@ -1940,6 +1940,12 @@
                   <a href="https://succeedquiz.com" target="_blank" rel="noopener noreferrer" class="link-live">
                     ↗ Open Platform (succeedquiz.com)
                   </a>
+                  <a href="https://github.com/demnzy/question-bank-automation-bot" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ GitHub (v1 Pipeline)
+                  </a>
+                  <a href="https://github.com/demnzy/question-bank-automation-bot-v2" target="_blank" rel="noopener noreferrer" class="link-live">
+                    ⌥ GitHub (v2 Engine)
+                  </a>
                 </div>
               </div>
 
@@ -1972,7 +1978,7 @@
         <div class="container">
           <div class="section-head">
             <div><h2 class="section-title">Research</h2></div>
-            <span class="section-note">Scientific ML for physical simulation: GP surrogates, multi-fidelity modeling, active learning.</span>
+            <span class="section-note">Using machine learning to understand physical systems, from heat simulations to mosquito sounds.</span>
           </div>
           <div class="projects-container">
             <article class="project-card spotlight-card" style="grid-template-columns:1fr;">
@@ -1981,15 +1987,16 @@
                 <h3 class="project-title">Multi-Fidelity GP Surrogate for 2D Heat Conduction</h3>
                 <p class="project-summary">A 2D transient finite-difference heat solver in pure PyTorch (Dirichlet boundaries) at two resolutions, coarse (16×16) and fine (64×64). A GPyTorch Exact GP couples a Matérn-5/2 kernel over six heater parameters with an IndexKernel over fidelity levels. A sequential <strong>uncertainty-per-cost</strong> active-learning loop chooses which fidelity to query, reaching <strong>0.0076°C</strong> absolute error on a held-out setup.</p>
                 <div class="tech-pill-list"><span class="tech-pill">PyTorch</span><span class="tech-pill">GPyTorch</span><span class="tech-pill">Active Learning</span><span class="tech-pill">Finite Differences</span></div>
-                <div class="project-links-bar"><a href="https://github.com/demnzy" target="_blank" rel="noopener noreferrer" class="link-live">⌥ GitHub</a></div>
+                <div class="project-links-bar"><a href="https://github.com/demnzy/multitask-pde-surrogate" target="_blank" rel="noopener noreferrer" class="link-live">⌥ GitHub</a></div>
               </div>
             </article>
             <article class="project-card spotlight-card" style="grid-template-columns:1fr;">
               <div class="project-info">
                 <div class="project-pill-row"><span class="pill-badge">Aug 2026 – Present</span><span class="pill-badge">Supervised Research</span></div>
                 <h3 class="project-title">Acoustic Vector Identification</h3>
-                <p class="project-summary">Undergraduate research supervised by Dr. J. A. Bala on identifying disease vectors from mosquito wingbeat frequency spectra. I built an MFCC and spectral-centroid feature-extraction pipeline in Python on public wingbeat audio datasets, in preparation for edge classification.</p>
-                <div class="tech-pill-list"><span class="tech-pill">Signal Processing</span><span class="tech-pill">MFCC</span><span class="tech-pill">Python</span></div>
+                <p class="project-summary">Undergraduate research supervised by Dr. J. A. Bala exploring acoustic identification of disease vectors from wingbeat frequency spectra. Formulated a 48-dimensional feature-extraction pipeline in Python (MFCCs, spectral centroid, spectral rolloff, zero-crossing rate) across 2,400 balanced Wingbeats recordings, and trained a lightweight PyTorch baseline classifier (VectorNet, 15.3k parameters, ~68 KB checkpoint) achieving 73.89% accuracy on a stratified test split.</p>
+                <div class="tech-pill-list"><span class="tech-pill">Signal Processing</span><span class="tech-pill">MFCC</span><span class="tech-pill">PyTorch</span><span class="tech-pill">Bioacoustics</span><span class="tech-pill">Edge ML</span></div>
+                <div class="project-links-bar"><a href="https://github.com/demnzy/acoustic-vector-identification" target="_blank" rel="noopener noreferrer" class="link-live">⌥ GitHub</a></div>
               </div>
             </article>
           </div>
@@ -2201,7 +2208,7 @@
               <div>
                 <h4 class="exp-role">Frontend Engineer (Contract)</h4>
                 <p class="exp-narrative">
-                  I spearheaded the frontend development for Inda's real estate intelligence and portfolio management SaaS platform.
+                  I led frontend development for Inda's real estate intelligence and portfolio management SaaS platform.
                 </p>
                 <ul class="exp-bullets">
                   <li>I architected a type-safe User Portal and Settings module in <strong>React and TypeScript</strong>, handling multi-view state for subscription tiers, data contribution credits, and user preferences.</li>
