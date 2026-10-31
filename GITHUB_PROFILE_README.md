@@ -1,11 +1,10 @@
 <div align="center">
 
-# Hi there, I'm Oluwatobiloba Davies 👋
-### Backend & Data Engineer · Applied ML Researcher · Mechatronics Scholar
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b192c,45:1e3a8a,100:d4af37&height=200&section=header&text=Oluwatobiloba%20Davies&fontSize=42&fontColor=f8fafc&fontFamily=Trebuchet%20MS&animation=fadeIn&fontAlignY=38&desc=Mechatronics%20Engineering%20%C2%B7%20Applied%20ML%20%C2%B7%20Backend%20Systems&descAlignY=62&descSize=16&descColor=f3cf65" width="100%" alt="Header Banner" />
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-d4af37?style=for-the-badge&logo=google-chrome&logoColor=030712)](https://demnzy.github.io/portfolio-website/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/oluwatobiloba-davies)
-[![YouTube](https://img.shields.io/badge/BuildHub-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@buildhubbers)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-d4af37?style=for-the-badge&logo=google-chrome&logoColor=0b192c)](https://demnzy.github.io/portfolio-website/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-38bdf8?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=1e3a8a)](https://linkedin.com/in/oluwatobiloba-davies)
+[![YouTube](https://img.shields.io/badge/BuildHub-YouTube-d4af37?style=for-the-badge&logo=youtube&logoColor=ffffff&labelColor=1e3a8a)](https://www.youtube.com/@buildhubbers)
 [![Email](https://img.shields.io/badge/Email-daviestobi3%40gmail.com-10b981?style=for-the-badge&logo=gmail&logoColor=white)](mailto:daviestobi3@gmail.com)
 
 <p align="center">
@@ -16,71 +15,60 @@
 
 ---
 
-### 💫 About Me
+### About Me
 
-I am a 300-level Mechatronics Engineering scholar at the **Federal University of Technology, Minna (4.96 / 5.00 CGPA)** and the Community Manager for **PyTorch Nigeria**. 
+I am a 300-level Mechatronics Engineering undergraduate at the **Federal University of Technology, Minna** (4.96 / 5.00 CGPA) and Community Manager for **PyTorch Nigeria**.
 
-My engineering lives at the convergence of backend architecture, intelligent systems, and physical computing:
-- ⚡ **Backend Architecture**: Engineering resilient, high-throughput asynchronous microservices in **FastAPI** with structured **PostgreSQL** relational schemas.
-- 🔄 **Autonomous Workflows**: Designing self-healing, multimodal **n8n automation pipelines** powered by LLMs and custom JavaScript state accumulators.
-- 🧠 **Applied Deep Learning**: Researching and training neural network models with **PyTorch**.
-- 🛠️ **Hardware & Systems**: Directing hardware engineering initiatives and dual-structure learning cohorts at **BuildHub**.
-
----
-
-### 🛠️ Technical Stack & Toolkit
-
-```ascii
-[ Core Philosophy ]  Modular Architecture  ·  Sub-100ms Latency  ·  Zero-Downtime Reliability
-```
-
-| Domain | Technologies & Frameworks |
-| :--- | :--- |
-| **Backend & APIs** | `FastAPI`, `Python (AsyncIO)`, `PostgreSQL`, `SQLAlchemy`, `Redis`, `REST APIs`, `Pydantic` |
-| **Machine Learning & AI** | `PyTorch`, `NumPy`, `Pandas`, `Computer Vision`, `LLM Integrations`, `Model Fine-Tuning` |
-| **Automation & Data** | `n8n`, `Webhook Infrastructure`, `ETL Pipelines`, `Docker`, `Git / GitHub Actions` |
-| **Frontend & UI** | `React`, `TypeScript`, `Tailwind CSS`, `HTML5 / Modern Canvas` |
-| **Mechatronics & IoT** | `Robotics & Control Systems`, `Embedded C / C++`, `Arduino`, `ESP32`, `Sensors & Actuators` |
+My work focuses on practical machine learning and reliable backend services:
+- **Scientific ML & Bioacoustics**: Building lightweight PyTorch classifiers for acoustic vector surveillance and multi-fidelity Gaussian process surrogates for physical simulations.
+- **Backend Architecture**: Designing asynchronous APIs with FastAPI, structured PostgreSQL relational schemas, and Redis caching.
+- **Workflow Automation & ETL**: Constructing structured document extraction pipelines using n8n, vision-language models, and GitHub Actions.
+- **Teaching & Community**: Running local physical builds and foundational computing cohorts at FUTMinna through **BuildHub**.
 
 ---
 
-### 🚀 Featured Engineering Works
+### Research & Applied Machine Learning
 
-| Project | Description | Stack | Repositories |
+| Project | Description | Stack | Repository |
 | :--- | :--- | :--- | :--- |
-| **Nu Age LMS** | Full-scale learning management ecosystem with asynchronous backend APIs, Bunny CDN streaming, and relational analytics. | `FastAPI` `PostgreSQL` `React` `BunnyCDN` | [Frontend](https://github.com/demnzy/nu-age-frontend) · [Backend](https://github.com/demnzy/nu-age-backend) |
-| **KRE8 Platform** | Creator economy web application supporting digital asset monetization, multi-tier permissions, and instantaneous downloads. | `FastAPI` `TypeScript` `PostgreSQL` | [Frontend](https://github.com/demnzy/kre8-frontend) · [Backend](https://github.com/demnzy/kre8-backend) |
-| **SucceedQuiz** | High-performance, adaptive test engine serving question banks with sub-100ms response times and real-time score analytics. | `Python` `Web APIs` `Modern UI` | [Live Engine](https://succeedquiz.com) |
-| **BuildHub** | Hardware engineering community combining global digital education with physical cohort builds at FUTMinna. | `Embedded Systems` `IoT` `Robotics` | [YouTube @buildhubbers](https://www.youtube.com/@buildhubbers) |
+| **[Acoustic Vector Identification](https://github.com/demnzy/acoustic-vector-identification)** | Undergraduate research supervised by Dr. J. A. Bala exploring acoustic identification of mosquito disease vectors from wingbeat spectra. Features a 48-dimensional MFCC/spectral descriptor pipeline and a lightweight PyTorch classifier (`VectorNet`, 15.3k params, ~68 KB checkpoint) achieving 73.89% test accuracy across 6 vector species. | `PyTorch` `librosa` `SciPy` `NumPy` | [`demnzy/acoustic-vector-identification`](https://github.com/demnzy/acoustic-vector-identification) |
+| **[Multi-Fidelity GP Surrogate](https://github.com/demnzy/multitask-pde-surrogate)** | Multi-fidelity Gaussian process surrogate modeling a 2D transient heat equation. Couples coarse (16×16) and fine (64×64) finite-difference PyTorch solvers with an uncertainty-per-cost active learning loop, achieving 0.0076°C error on held-out configurations. | `PyTorch` `GPyTorch` `Active Learning` | [`demnzy/multitask-pde-surrogate`](https://github.com/demnzy/multitask-pde-surrogate) |
 
 ---
 
-### 🏆 Honors & Global Recognitions
+### Systems & Engineering Projects
 
-- 🥇 **Future Tech Award** : BIEA International STEM Competition 2026
-- 🌟 **Future Leaders Award** : BIEA International STEM Competition 2025
-- 🎖️ **STEM Star Award** : United Latino Students Association (ULSA) 2025
-- 🚀 **Genesis Project API Synthesis** : NASA Space Apps Challenge 2025
-- 📝 **Honours List** : Immerse Education Academic Essay Competition 2026
-- 🎓 **MIAENG Member** : International Association of Engineers (ID: 555123)
+| Platform / Pipeline | Description | Stack | Links |
+| :--- | :--- | :--- | :--- |
+| **Nu Age LMS** | Asynchronous learning management backend and user portal featuring video streaming via Bunny CDN, enrollment tracking, and relational data models. | `FastAPI` `PostgreSQL` `React` `BunnyCDN` | [Frontend](https://github.com/demnzy/nu-age-frontend) · [Backend](https://github.com/demnzy/nu-age-backend) |
+| **KRE8 Creator Studio** | Digital creator platform handling product distribution, asset delivery, and role-based permissions. | `FastAPI` `TypeScript` `PostgreSQL` | [Frontend](https://github.com/demnzy/kre8-frontend) · [Backend](https://github.com/demnzy/kre8-backend) |
+| **Question Bank Automation v1 & v2** | Automated pipelines converting exam PDFs and raw tables into schema-validated LMS-ready question banks (supporting single-choice, multiple-response, drag-and-drop, and scenario items). | `Python` `GitHub Actions` `XML/JSON` | [v1 Pipeline](https://github.com/demnzy/question-bank-automation-bot) · [v2 Engine](https://github.com/demnzy/question-bank-automation-bot-v2) |
+| **BuildHub Cohorts** | Student computing initiative at FUTMinna combining physical hands-on workshops with practical PyTorch and hardware tutorials. | `PyTorch` `Flet` `Python` `IoT` | [YouTube (@buildhubbers)](https://www.youtube.com/@buildhubbers) · [pytorch-x-flet](https://github.com/demnzy/pytorch-x-flet) |
 
 ---
 
-### 📊 GitHub Activity & Statistics
+### Technical Focus
+
+- **Languages**: Python (AsyncIO, PyTorch, NumPy, SciPy), TypeScript / JavaScript, SQL, C / C++ (Embedded)
+- **Machine Learning & Simulation**: PyTorch, GPyTorch, librosa, Scientific Computing (Finite Differences, Active Learning)
+- **Backend & Data**: FastAPI, PostgreSQL, SQLAlchemy, Redis, Docker, Pydantic, RESTful APIs
+- **Automation & CI/CD**: n8n, GitHub Actions, Automated Testing, Webhooks
+
+---
+
+### Honors & Recognition
+
+- **Future Tech Award** · BIEA International STEM Competition (2026)
+- **Future Leaders Award** · BIEA International STEM Competition (2025)
+- **STEM Star Award** · United Latino Students Association (2025)
+- **Genesis Project API Synthesis** · NASA Space Apps Challenge (2025)
+- **Member (ID: 555123)** · International Association of Engineers (MIAENG)
+
+---
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=demnzy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=030712&title_color=d4af37&icon_color=f3cf65&text_color=a0b3d6" height="165" alt="Oluwatobiloba's GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=demnzy&layout=compact&theme=tokyonight&hide_border=true&bg_color=030712&title_color=d4af37&text_color=a0b3d6" height="165" alt="Top Languages" />
+<img src="https://github-readme-stats.vercel.app/api?username=demnzy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&icon_color=38bdf8&text_color=cbd5e1" height="165" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=demnzy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&text_color=cbd5e1" height="165" alt="Top Languages" />
 
 </div>
-
----
-
-### 📬 Get in Touch
-
-- 🌐 **Interactive Portfolio**: [demnzy.github.io/portfolio-website](https://demnzy.github.io/portfolio-website/)
-- 💼 **LinkedIn**: [linkedin.com/in/oluwatobiloba-davies](https://linkedin.com/in/oluwatobiloba-davies)
-- ✉️ **Direct Email**: [daviestobi3@gmail.com](mailto:daviestobi3@gmail.com)
-- 📍 **Location**: Minna, Niger State / Lagos, Nigeria
-
