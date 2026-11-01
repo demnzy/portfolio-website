@@ -68,7 +68,7 @@ My work focuses on practical machine learning and reliable backend services:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=demnzy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&icon_color=38bdf8&text_color=cbd5e1" height="165" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=demnzy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&text_color=cbd5e1" height="165" alt="Top Languages" />
+<img src="https://github-readme-stats-fast.vercel.app/api?username=demnzy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&icon_color=38bdf8&text_color=cbd5e1" height="165" alt="GitHub Stats" />
+<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=demnzy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b192c&title_color=d4af37&text_color=cbd5e1" height="165" alt="Top Languages" />
 
 </div>
